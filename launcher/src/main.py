@@ -1,3 +1,7 @@
+#a test comment
+#i am making it async so that the UI can load instantly and then the background thread can fetch the data without locking up the interface
+#some of the code is based on the PySide6 documentation and examples, but I have modified it to fit my needs
+
 import sys
 print("DEBUG: Step 1 - Asynchronous main.py has started.")
 

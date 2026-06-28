@@ -3,7 +3,7 @@ Write-Host "   NOVA CLIENT AUTOMATED BACKUP ENGINE   " -ForegroundColor Cyan
 Write-Host "==========================================" -ForegroundColor Cyan
 
 # 1. Move to the project root folder to ensure commands execute correctly
-cd "$PSScriptRoot\.."
+Set-Location "$PSScriptRoot\.."
 
 # 2. Automatically grab a clean date and time string for our save file note
 $CurrentDateTime = Get-Date -Format "yyyy-MM-dd HH:mm:ss"

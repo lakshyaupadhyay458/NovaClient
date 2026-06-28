@@ -1,0 +1,21 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local environments and dependency installations
+.venv/
+venv/
+ENV/
+dist/
+build/
+
+# Operating System specific files
+Thumbs.db
+.DS_Store
+
+# Nova Client Local Runtime files (We don't backup the game files!)
+launcher/src/.novaclient/
+.novaclient/
+*.jar
+*.log

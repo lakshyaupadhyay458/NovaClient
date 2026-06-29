@@ -4,16 +4,18 @@ plugins {
 }
 
 // 2. Set the project details matching our Client Philosophy
-group 'com.novaclient'
-version '1.0.0-Alpha'
+group = 'com.novaclient'
+version = '1.0.0-Alpha'
 
-// 3. Define the target Java compiler version (Java 21 is ideal for modern optimized clients)
-sourceCompatibility = 21
-targetCompatibility = 21
+// 3. Define the Java compiler toolchain specs (Modern Gradle 9 Syntax)
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
 
 // 4. Tell Gradle where to look for external code libraries on the internet
 repositories {
-    mavenCentral() // The standard universal repository for secure Java libraries
+    mavenCentral() // Universal repository for secure Java libraries
     maven { url 'https://libraries.minecraft.net/' } // Official Mojang library repository
 }
 
@@ -29,6 +31,6 @@ dependencies {
 }
 
 // 6. Configure the compilation encoding settings for high performance compatibility
-tasks.withType(JavaCompile) {
+tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
 }
